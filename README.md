@@ -155,3 +155,85 @@
 ### Remember
 
 - Template reference variables are only available within the template, not in the component .ts file unless you pass them using @ViewChild.
+
+## Structural Directives
+
+- Change the structure of the DOM, they add or remove elements based on certain conditions.
+
+### Common Structural Directives
+
+![Alt text](/public/StructuralDirectives.png)
+
+### How Structural Directives Work
+
+- Use the asterisk \* as a short-hand for modifying the DOM.
+
+- Behind the scenes, \*directive is translated into **ng-template** with logic to insert or remove content.
+
+- You can create custom structural directives using the @Directive decorator and TemplateRef + ViewContainerRef.
+
+## \*ngIf
+
+- if else (conditional)
+
+- Used to conditionally include or exclude an element from the DOM based on a boolean expression.
+
+### Syntax
+
+![Alt text](/public/Syntaxforngif.png)
+
+### How it works
+
+- If the condition is true, Angular adds the element to the DOM.
+
+- If the condition is false, Angular removes the element from the DOM.
+
+### Use cases
+
+- Show/hide login/logout buttons
+
+- Display messages based on user roles or states
+
+- Render components only when necessary
+
+## \*ngSwitch
+
+- Switch case
+
+- Use to conditionally display one out of many elements, depending on a value.
+
+- It works like a switch-case statement in programming.
+
+### Basic Syntax
+
+![Alt text](/public/ngSwitch.png)
+
+### How It Works
+
+- Use [ngSwitch] to bind to a variable.
+
+- Use \*ngSwitchCase for each possible value.
+
+- Use \*ngSwitchDefault for the default (fallback) case.
+
+## \*ngFor
+
+- Looping
+
+- Use to loop through a list or array and repeat an HTML element for each item.
+
+### Basic Syntax of \*ngFor
+
+![Alt text](/public/SyntaxofngFor.png)
+
+- **items** is an array from your component.
+
+- **item** is a local variable that holds the current value in each loop.
+
+### Use for
+
+- Dynamic — updates automatically if the array changes.
+
+- Clean — avoids manually writing the same element multiple times.
+
+- Powerful — you can get index, first, last, even, odd, etc.
