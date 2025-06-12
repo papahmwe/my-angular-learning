@@ -1,7 +1,39 @@
 <main>
   <h1>{{greeting()}}</h1>
-  <h1>2 + 3 = {{2 + 3}}</h1>
-  <h1>This is Angular Journey.</h1>
+
+  <!-- *ngIf -->
+
+  <!-- <h1 *ngIf="displayVal; else elseBlock">2 + 3 = {{2 + 3}}</h1>
+  <ng-template #elseBlock>
+    <h1>This is Angular Journey.</h1>
+  </ng-template> -->
+
+  <div *ngIf="displayVal; then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock>
+    <h1>This is thenBlock.</h1>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <h1>This is elseBlock.</h1>
+  </ng-template>
+
+  <h1 *ngIf="false">This is Angular Journey.</h1>
+
+  <!-- ngSwitch -->
+
+  <div [ngSwitch]="displayColor">
+    <div *ngSwitchCase="'red'">Red is selected.</div>
+    <div *ngSwitchCase="'blue'">Blue is selected.</div>
+    <div *ngSwitchCase="'green'">Green is selected.</div>
+    <div *ngSwitchDefault>Selected Again!</div>
+  </div>
+
+  <!-- ngFor -->
+  <div *ngFor="let Arr of displayArr; index as i">
+    <h2>{{i}} = {{Arr}}
+    </h2>
+  </div>
 
   <a routerLink="">Home</a>
   <a routerLink="about">About</a>

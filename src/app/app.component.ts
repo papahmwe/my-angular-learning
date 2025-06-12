@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular learning';
 
+  displayVal = false;
+  displayColor = 'purple';
+  displayArr = [1, 2, 3, 4, 5, 6, 7];
+
   greeting() {
     return 'Hello' + ' ' + this.title;
   }
