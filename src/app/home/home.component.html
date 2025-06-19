@@ -1,10 +1,24 @@
 <main>
-      <p [ngClass]="{redColor:true}">Home works!</p>
+      <h1>Home Page</h1>
+      <!-- <p [ngClass]="{ redColor: true }">Home works!</p>
       <input type="text" value="{{ myText }}" />
       <br />
       <button (click)="[myClickFun()]">Click Me</button>
       <button [disabled]="disabledBool" (click)="[myClickFun()]">Click</button>
       <br />
-      <h1 [ngClass]="{colorPurple:disabledBool}">Hello Angular</h1>
+      <h1 [ngClass]="{ colorPurple: disabledBool }">Hello Angular</h1>
+
+      <h3>{{parentData}}</h3> -->
+
+      <!-- <h1>{{parentData}}</h1>
+
+      <button (click)="eventEmit()">Emitting event!</button> -->
+
+      <ul>
+            <li *ngFor="let empInfo of employee">
+                  {{empInfo.id}} - {{empInfo.name}} is age {{empInfo.age}}.
+            </li>
+      </ul>
+
       <ng-content></ng-content>
 </main>

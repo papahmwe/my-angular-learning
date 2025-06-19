@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,29 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  myText: string = 'Fill the blanks...';
-  disabledBool: boolean = false;
+  employee: any[] = [];
 
-  myClickFun() {
-    return (this.disabledBool = !this.disabledBool);
+  // Dependency Injection
+  // Please give me an object of EmployeeService.
+
+  constructor(private employeeService: EmployeeService) {}
+
+  // To load data from a service
+  ngOnInit() {
+    this.employee = this.employeeService.getEmployees();
   }
+
+  // @Input() parentData: string | undefined;
+
+  // @Output() childEvent = new EventEmitter();
+  // // myText: string = 'Fill the blanks...';
+  // // disabledBool: boolean = false;
+
+  // // myClickFun() {
+  // //   return (this.disabledBool = !this.disabledBool);
+  // // }
+
+  // eventEmit() {
+  //   return this.childEvent.emit("Hello, I'm from Home.");
+  // }
 }

@@ -1,51 +1,71 @@
 <main>
-  <h1>{{greeting()}}</h1>
+  <div>
+    <!-- <h1>{{greeting()}}</h1> -->
 
-  <!-- *ngIf -->
+    <!-- *ngIf -->
 
-  <!-- <h1 *ngIf="displayVal; else elseBlock">2 + 3 = {{2 + 3}}</h1>
+    <!-- <h1 *ngIf="displayVal; else elseBlock">2 + 3 = {{2 + 3}}</h1>
   <ng-template #elseBlock>
     <h1>This is Angular Journey.</h1>
   </ng-template> -->
 
-  <div *ngIf="displayVal; then thenBlock; else elseBlock"></div>
+    <!-- <div *ngIf="displayVal; then thenBlock; else elseBlock"></div>
 
-  <ng-template #thenBlock>
-    <h1>This is thenBlock.</h1>
-  </ng-template>
+    <ng-template #thenBlock>
+      <h1>This is thenBlock.</h1>
+    </ng-template>
 
-  <ng-template #elseBlock>
-    <h1>This is elseBlock.</h1>
-  </ng-template>
+    <ng-template #elseBlock>
+      <h1>This is elseBlock.</h1>
+    </ng-template>
 
-  <h1 *ngIf="false">This is Angular Journey.</h1>
+    <h1 *ngIf="false">This is Angular Journey.</h1> -->
 
-  <!-- ngSwitch -->
+    <!-- ngSwitch -->
 
-  <div [ngSwitch]="displayColor">
-    <div *ngSwitchCase="'red'">Red is selected.</div>
-    <div *ngSwitchCase="'blue'">Blue is selected.</div>
-    <div *ngSwitchCase="'green'">Green is selected.</div>
-    <div *ngSwitchDefault>Selected Again!</div>
-  </div>
+    <!-- <div [ngSwitch]="displayColor">
+      <div *ngSwitchCase="'red'">Red is selected.</div>
+      <div *ngSwitchCase="'blue'">Blue is selected.</div>
+      <div *ngSwitchCase="'green'">Green is selected.</div>
+      <div *ngSwitchDefault>Selected Again!</div>
+    </div> -->
 
-  <!-- ngFor -->
-  <div *ngFor="let Arr of displayArr; index as i">
-    <h2>{{i}} = {{Arr}}
-    </h2>
-  </div>
+    <!-- ngFor -->
+    <!-- <div *ngFor="let Arr of displayArr; index as i">
+      <h2>{{i}} = {{Arr}}
+      </h2>
+    </div>
 
-  <a routerLink="">Home</a>
-  <a routerLink="about">About</a>
-  <a routerLink="contact">Contact</a>
+    <a routerLink="">Home</a> -->
+    <!-- <a routerLink="about">About</a>
+    <a routerLink="contact">Contact</a> -->
 
-  <!-- <app-home>
+    <!-- <app-home>
     <h1>This is home testing.</h1>
   </app-home>
 
   <app-about></app-about>
   <app-contact></app-contact> -->
+  </div>
 
+  <!-- <h1>{{message | titlecase}}</h1>
+  <h1>{{message | slice:7}}</h1>
+  <h1>{{message | slice:2:7}}</h1>
+  <p>{{person | json}}</p>
+  <p>{{0.25 | currency : "GBP" : 'code'}}</p>
+  <p>{{0.25 | percent}}</p>
+  <p>{{date}}</p>
+  <p>{{date | date : 'short'}}</p>
+  <p>{{date | date : 'shortDate'}}</p>
+  <p>{{date | date : 'shortTime'}}</p>
+
+  <h1>{{ message }}</h1> -->
+
+
+  <!-- <app-home (childEvent)="message=$event" [parentData]="name"></app-home> -->
+  <app-home></app-home>
+  <app-about></app-about>
 </main>
 
-<router-outlet />
+
+<router-outlet></router-outlet>
