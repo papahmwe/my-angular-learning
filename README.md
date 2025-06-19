@@ -62,11 +62,7 @@
 
 ## Service
 
-- A class with reusable logic or data.
-
-- Services help keep components simple and focused.
-
-- A TypeScript class with methods that provide specific functionality. For example, services are commonly used to:
+- A TypeScript class with reusable logic or data and provide specific functionality. For example, services are commonly used to:
 
   - Fetch data from an API,
 
@@ -75,6 +71,8 @@
   - Perform calculations,
 
   - Handle authentication.
+
+- Services help keep components simple and focused.
 
 - Use **ng generate service** to quickly create one.
 
@@ -237,3 +235,67 @@
 - Clean — avoids manually writing the same element multiple times.
 
 - Powerful — you can get index, first, last, even, odd, etc.
+
+## Component Interaction
+
+- The ways in which components communicate and share data with each other.
+
+![Alt text](/public/ComponentInteraction.png)
+
+## Difference between Component Interaction and Data Binding
+
+![Alt text](/public//DataBidingVsComponentInter.png)
+
+## What is $event?
+
+- A special Angular variable that holds the data sent from an event.
+
+## Pipes
+
+- A pipe in Angular is used to transform data before displaying it in the template.
+
+### Syntax of Pipes
+
+{{ value | pipeName }}
+
+### Built-in Pipes (Most Common)
+
+![Alt text](</public//Built-in%20Pipes%20(Most%20Common).png>)
+
+## What is an Observable?
+
+- An Observable is like a stream of data that you can subscribe to and react to changes over time.
+
+### Why Use Observables in Angular?
+
+- To get data from a backend (HTTP requests)
+
+- To react to user input (clicks, typing)
+
+- To listen for form changes
+
+- To handle real-time updates (like chat or notifications)
+
+### Key Terms
+
+![Alt text](/public/Observables.png)
+
+## RxJS - Reactive Extensions for JavaScript
+
+- A JavaScript library for working with Observables, used heavily in Angular to handle asynchronous or event-based programs.
+
+### What Does RxJS Do?
+
+- Listen to events or data streams
+
+- Transform, filter, and combine those streams
+
+- Handle async data (like API calls, timers, user input) easily
+
+### RxJS Core Concepts
+
+![Alt text](/public/RxJS%20Core%20Concepts.png)
+
+### Popular RxJS Operators
+
+![Alt text](/public/Popular%20RxJS%20Operators.png)
